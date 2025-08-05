@@ -1,3 +1,7 @@
+## Example usage
+
+`find <dir-with-files> -type f -name '*.fbx' -exec ./2gltf2.sh {} +`
+
 [![](glTF.png)](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0)
 
 # To glTF 2.0 converter
