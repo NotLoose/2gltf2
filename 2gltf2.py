@@ -57,6 +57,10 @@ for current_argument in sys.argv:
         continue
 
     bpy.ops.wm.read_factory_settings(use_empty=True)
+    bpy.context.preferences.addons["io_scene_gltf2"].preferences[
+        "allow_embedded_format"
+    ] = True
+
     print("Converting: '" + current_argument + "'")
 
     if current_extension == ".abc":
@@ -92,4 +96,4 @@ for current_argument in sys.argv:
 
     export_file = current_directory + "/" + current_basename + ".gltf"
     print("Writing: '" + export_file + "'")
-    bpy.ops.export_scene.gltf(filepath=export_file)
+    bpy.ops.export_scene.gltf(filepath=export_file, export_format="GLTF_EMBEDDED")

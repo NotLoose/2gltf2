@@ -2,7 +2,7 @@
 
 Nushell:
 
-`ls <dir-with-files> | bash ./2gltf2.sh`
+`bash ./2gltf2.sh ...(ls <dir-with-fbx-files>).name`
 
 [![](glTF.png)](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0)
 
