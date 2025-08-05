@@ -22,22 +22,10 @@
 # SOFTWARE.
 #
 
-#
-# Imports
-#
-
 import os
 import sys
 
 import bpy
-
-#
-# Globals
-#
-
-#
-# Functions
-#
 
 current_directory = os.getcwd()
 
@@ -48,8 +36,6 @@ for current_argument in sys.argv:
         if current_argument == "--":
             force_continue = False
         continue
-
-    #
 
     root, current_extension = os.path.splitext(current_argument)
     current_basename = os.path.basename(root)
@@ -103,8 +89,6 @@ for current_argument in sys.argv:
 
     if current_extension == ".wrl" or current_extension == ".x3d":
         bpy.ops.import_scene.x3d(filepath=current_argument)
-
-    #
 
     export_file = current_directory + "/" + current_basename + ".gltf"
     print("Writing: '" + export_file + "'")
